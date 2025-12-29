@@ -15,12 +15,10 @@ jobs:
           sudo apt install -y cmake g++ 
     
       - name: Configure project
-        run: |
-          cmake -S.-B build
+        run: cmake -S . -B build
 
       - name: Build project
-        run: |
-         cmake --build build
+        run: cmake --build build
 
       - name: Run tests
         run: |
